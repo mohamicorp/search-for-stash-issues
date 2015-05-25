@@ -12,9 +12,9 @@
 - [Contact Us](#contact-us)
 
 ### Installation Requirements
-**Search for Stash** is powered by an internal Elasticsearch node. This node handles all search requests and all repository indexing. The initial indexing of large repositories can potentially require a large portion of RAM. It is **recommended to allocate  Stash 6GB of RAM** for optimal performance. For instructions look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
+**Search for Stash** is powered by an internal Elasticsearch node. This node handles all search requests and all repository indexing. The initial indexing of large repositories can potentially require a large portion of RAM. It is **recommended to allocate Stash 6GB of RAM** for optimal performance. For instructions look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
 
-As an example benchmark, **Search for Stash** indexed the Linux code base which is approximately 15 million lines of code and half a million commits in 2-3 minutes. That said, it is **recommended** that for large codebases you experiment on a staging environment to test performance. For any concerns or questions, feel free to [contact us](mailto:mohamicorp@gmail.com).
+As an example benchmark, **Search for Stash** indexed the Linux code base which is approximately 15 million lines of code and half a million commits in 2-3 minutes with **6 GB** of ram on non SSD harddives. That said, it is **recommended** that for large codebases you experiment on a staging environment to test performance. For any concerns or questions, feel free to [contact us](mailto:mohamicorp@gmail.com).
 ### Installing
 
 After installing the plugin in your stash instance, you must enable indexing and trigger a reindex:
@@ -31,6 +31,7 @@ By default, only the master and develop branches are indexed. Individual repo ad
 Since **Search for Stash** is powered by Elasticsearch, it utilizes Elasticsearch's powerful [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). This includes support for wildcards, regular expressions, fuzziness, and much more.
 
 There are also many advanced filtering options. Here is a brief summary:
+
 | Option | Description |
 | ------------- | ------------- |
 | Search code, filenames and commits | Filter results to only code, commits, or filenames | 
