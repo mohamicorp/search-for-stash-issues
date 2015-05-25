@@ -4,12 +4,12 @@
 
 **Table of Contents**
 
-- [Installation Requirements](#)
-- [Installing](#)
-- [Features](#)
-- [Administration](#)
-- [Repository Settings](#)
-- [Contact Us](#)
+- [Installation Requirements](#installation-requirements)
+- [Installing](#installing)
+- [Features](#features)
+- [Administration](#administration)
+- [Repository Settings](#repository-settings)
+- [Contact Us](#contact-us)
 
 ### Installation Requirements
 **Search for Stash** is powered by an internal Elasticsearch node. This node handles all search requests and all repository indexing. The initial indexing of large repositories can potentially require a large portion of RAM. It is **recommended to allocate  Stash 6GB of RAM** for optimal performance. For instructions look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
@@ -77,3 +77,5 @@ For example if we wanted to add the branch `my-branch`, we would modify the rege
 ### Contact Us
 
 If you want to get help, request a feature or report a bug, please email us at  [contact us](mailto:mohamicorp@gmail.com) or open an issue. **We'd love to hear from you!**
+
+
