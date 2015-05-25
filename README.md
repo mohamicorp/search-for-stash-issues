@@ -11,10 +11,19 @@
 - [Repository Settings](#repository-settings)
 - [Contact Us](#contact-us)
 
+
+----------
+
+
 ### Installation Requirements
 **Search for Stash** is powered by an internal Elasticsearch node. This node handles all search requests and all repository indexing. The initial indexing of large repositories can potentially require a large portion of RAM. It is **recommended to allocate Stash 6GB of RAM** for optimal performance. For instructions look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
 
 As an example benchmark, **Search for Stash** indexed the Linux code base which is approximately 15 million lines of code and half a million commits in 2-3 minutes with **6 GB** of ram on non SSD harddives. That said, it is **recommended** that for large codebases you experiment on a staging environment to test performance. For any concerns or questions, feel free to [contact us](mailto:mohamicorp@gmail.com).
+
+
+----------
+
+
 ### Installing
 
 After installing the plugin in your stash instance, you must enable indexing and trigger a reindex:
@@ -26,6 +35,10 @@ After installing the plugin in your stash instance, you must enable indexing and
 **Search for Stash** will then start indexing all of your stash repositories in the background. It will take a few seconds to a few minutes to finish depending on the number and size of your repositories. For large Stash instances, it is recommend indexing to be done during non peak hours.
 
 By default, only the master and develop branches are indexed. Individual repo admins may modify these settings. See [below](#repository-settings) for instructions.
+
+
+----------
+
 
 ### Features
 Since **Search for Stash** is powered by Elasticsearch, it utilizes Elasticsearch's powerful [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). This includes support for wildcards, regular expressions, fuzziness, and much more.
@@ -41,6 +54,9 @@ There are also many advanced filtering options. Here is a brief summary:
 | File extensions | Filter results to certain file extentions |
 | Author/editor names or emails | Filter results to a specific author |
 | Committed on or after/before (Commits only) | Filter results to a certain date range.|
+
+
+----------
 
 
 ### Administration
@@ -63,6 +79,9 @@ Search for Stash has advanced configuration settings. These settings should only
 | Filename Boost | Boosting factor of results with matching file names
 
 
+----------
+
+
 ### Repository Settings
 
 By default, only master and develop are indexed. Individual repo admins may modify these settings as follows:
@@ -74,6 +93,10 @@ By default, only master and develop are indexed. Individual repo admins may modi
 For example if we wanted to add the branch `my-branch`, we would modify the regex to look like :
 
     HEAD|(refs/heads/(master|develop|my-branch))
+
+
+----------
+
 
 ### Contact Us
 
