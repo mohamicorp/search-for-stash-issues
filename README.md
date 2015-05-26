@@ -1,6 +1,6 @@
 # Search for Stash
 
-**Search for Stash** is a code, file and commit search service for Atlassian's Stash. It's powered by an embedded [Elasticsearch](https://www.elastic.co/products/elasticsearch) node.
+**Search for Stash** is a code, file and commit search service for Atlassian's Stash. It's powered by a built-in [Elasticsearch](https://www.elastic.co/products/elasticsearch) node.
 
 **Table of Contents**
 
