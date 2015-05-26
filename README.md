@@ -16,7 +16,7 @@
 
 
 ### Installation Requirements
-**Search for Stash** is powered by an internal Elasticsearch node. This node handles all search requests and all repository indexing. The initial indexing of large repositories can potentially require a large portion of RAM. It is **recommended to allocate Stash 6GB of RAM** for optimal performance. For instructions look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
+**Search for Stash** is powered by an internal Elasticsearch node. This node handles all search requests and all repository indexing. The initial indexing of large repositories can potentially require a large portion of RAM. It is **recommended to allocate Stash 6GB of RAM** for optimal performance. For instructions on changing the amount of memory available to Stash, take a look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
 
 As an example benchmark, **Search for Stash** indexed the Linux code base which is approximately 15 million lines of code and half a million commits in 2-3 minutes with **6 GB** of ram on non SSD harddives. That said, it is **recommended** that for large codebases you experiment on a staging environment to test performance. For any concerns or questions, feel free to [contact us](mailto:mohamicorp@gmail.com).
 
