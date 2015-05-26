@@ -41,7 +41,7 @@ By default, only the master and develop branches are indexed. Individual repo ad
 
 
 ### Features
-Since **Search for Stash** is powered by Elasticsearch, it utilizes Elasticsearch's powerful [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). This includes support for wildcards, regular expressions, fuzziness, and much more.
+Since **Search for Stash** is powered by Elasticsearch. It utilizes Elasticsearch's powerful [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). This includes support for wildcards, regular expressions, fuzziness, and much more.
 
 There are also many advanced filtering options. Here is a brief summary:
 
