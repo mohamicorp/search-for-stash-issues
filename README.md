@@ -45,6 +45,8 @@ After installing the plugin in your stash instance, you must enable indexing and
 ####External Node
 You must first setup an external Elasticsearch cluster. For help on that, look [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html). **Search for Stash** will listen for a transport on `localhost:9300` with the cluster name `stash-codesearch`.
 
+For testing purposes, we've provided some scripts for installing and running an elasticsearch instance. You can obtain an instance of Elasticsearch by running the provided `bin/install-elasticsearch-instance.sh` script. To run an Elasticsearch instance, run `bin/invoke-es.sh`. Make sure that `elasticearch.yml` is in the directory you are invoking Elasticsearch in so that the Elasticsearch configuration is picked up.
+
 Once the node is setup, you must configure **Search for Stash**: 
 
  1. Go to `Search for Stash Global Settings` page in the Stash admin panel.
