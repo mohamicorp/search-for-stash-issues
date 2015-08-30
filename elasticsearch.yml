@@ -1,0 +1,4 @@
+cluster.name: stash-codesearch
+client.transport.cluster.host: 127.0.0.1
+client.transport.cluster.port: 9300-9305
+client.transport.sniff: true
