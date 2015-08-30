@@ -84,7 +84,8 @@ Search for Stash has advanced configuration settings. These settings should only
 
 | Setting  | Description |
 | ------------- | ------------- |
-| Indexing  | Check this box to enable indexing of new source code & commits  |
+| Internal ES Node | Check this box to use an internal elasticsearch service. |
+| Indexing  | Check this box to enable indexing of new source code & commits |
 | Indexing Concurrency Limit  | Maximum number of concurrent indexing jobs|
 | Max Filesize| Maximum size (in bytes) of source code files to index
 | Search Timeout| Timeout (in ms) of all search requests
