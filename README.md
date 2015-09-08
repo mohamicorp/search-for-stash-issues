@@ -16,7 +16,7 @@
 
 
 ### Installation Requirements
-**Search for Stash** requires that your server use git 1.8.0 or higher.
+**Search for Stash** requires that your server use git 1.8.5 or higher.
 
 **Search for Stash** is powered by Elasticsearch. Either an internal or external node can be used. This node handles all search requests and all repository indexing. 
 
