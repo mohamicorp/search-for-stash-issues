@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1.3.3
-DOWNLOAD_URL="https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.3.tar.gz"
+DOWNLOAD_URL="https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.5.2.tar.gz"
 
 # To find new URLs, see: http://www.elasticsearch.org/download/
 
