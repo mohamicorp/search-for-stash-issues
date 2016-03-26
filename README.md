@@ -25,6 +25,7 @@ You can checkout a demo of search [here](http://demo.mohamicorp.com/plugins/serv
        * [Is there an API I can use for queries?](#is-there-an-api-i-can-use-for-queries)
        * [Please tell me, for every new commit, is the entire project indexed, or just the changes files in that commit?](#please-tell-me-for-every-new-commit-is-the-entire-project-indexed-or-just-the-changes-files-in-that-commit)
        * [Which version of Elasticsearch do I need for an external node?](#which-version-of-elasticsearch-do-i-need-for-an-external-node)
+- [Reporting a Bug](#reporting-a-bug)
 - [Contact Us](#contact-us)
 
 
@@ -203,6 +204,8 @@ You currently must use Elastichsearch version 1.5.2. We are planning on adding E
 
 ----------
 
+### Reporting a Bug
+If you encounter a bug, please open an issue here, and then send us the logs detailed in [Plugin Logging](#plugin-logging) to [support](mailto:support@mohamicorp.com).
 
 ### Contact Us
 
