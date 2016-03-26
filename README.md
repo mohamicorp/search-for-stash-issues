@@ -11,9 +11,21 @@ You can checkout a demo of search [here](http://demo.mohamicorp.com/plugins/serv
 - [Features](#features)
 - [Administration](#administration)
 - [Repository Settings](#repository-settings)
-- [Plugin Logging](#logging)
+- [Plugin Logging](#plugin-logging)
 - [FAQ](#faq)
+       * [Assuming I use the embedded Elasticsearch](#assuming-i-use-the-embedded-elasticsearch)
+         * [a.       What is the added load on my server?](#a-------what-is-the-added-load-on-my-server)
+         * [b.      Are there special HW requirements to support it?](#b------are-there-special-hw-requirements-to-support-it)
+       * [If I use the global search, will it apply permissions restrictions (meaning if I have no access to a project/repository it will omit them from results)?](#if-i-use-the-global-search-will-it-apply-permissions-restrictions-meaning-if-i-have-no-access-to-a-projectrepository-it-will-omit-them-from-results)
+       * [How do I control the Elasticsearch process?](#how-do-i-control-the-elasticsearch-process)
+       * [How can I re-index all?](#how-can-i-re-index-all)
+       * [How can I know indexing status?](#how-can-i-know-indexing-status)
+       * [After a code change, how soon should I expect the search to find it?](#after-a-code-change-how-soon-should-i-expect-the-search-to-find-it)
+       * [How much disk space is used by this add-on?](#how-much-disk-space-is-used-by-this-add-on)
+       * [Is there an API I can use for queries?](#is-there-an-api-i-can-use-for-queries)
+       * [Please tell me, for every new commit, is the entire project indexed, or just the changes files in that commit?](#please-tell-me-for-every-new-commit-is-the-entire-project-indexed-or-just-the-changes-files-in-that-commit)
 - [Contact Us](#contact-us)
+
 
 
 ----------
@@ -138,7 +150,17 @@ The plugin has a robust logging system. The following log files exist for the pl
 It is important to note that debug log information will not be recorded unless debug logging has been turned on in Bitbucket's settings.
 
 ### FAQ
-
+* [Assuming I use the embedded Elasticsearch](#assuming-i-use-the-embedded-elasticsearch)
+	* [a.       What is the added load on my server?](#a-------what-is-the-added-load-on-my-server)
+	* [b.      Are there special HW requirements to support it?](#b------are-there-special-hw-requirements-to-support-it)
+* [If I use the global search, will it apply permissions restrictions (meaning if I have no access to a project/repository it will omit them from results)?](#if-i-use-the-global-search-will-it-apply-permissions-restrictions-meaning-if-i-have-no-access-to-a-projectrepository-it-will-omit-them-from-results)
+* [How do I control the Elasticsearch process?](#how-do-i-control-the-elasticsearch-process)
+* [How can I re-index all?](#how-can-i-re-index-all)
+* [How can I know indexing status?](#how-can-i-know-indexing-status)
+* [After a code change, how soon should I expect the search to find it?](#after-a-code-change-how-soon-should-i-expect-the-search-to-find-it)
+* [How much disk space is used by this add-on?](#how-much-disk-space-is-used-by-this-add-on)
+* [Is there an API I can use for queries?](#is-there-an-api-i-can-use-for-queries)
+* [Please tell me, for every new commit, is the entire project indexed, or just the changes files in that commit?](#please-tell-me-for-every-new-commit-is-the-entire-project-indexed-or-just-the-changes-files-in-that-commit)
 ####Assuming I use the embedded Elasticsearch
 
 #####a.       What is the added load on my server?
