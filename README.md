@@ -161,6 +161,7 @@ It is important to note that debug log information will not be recorded unless d
 * [How much disk space is used by this add-on?](#how-much-disk-space-is-used-by-this-add-on)
 * [Is there an API I can use for queries?](#is-there-an-api-i-can-use-for-queries)
 * [Please tell me, for every new commit, is the entire project indexed, or just the changes files in that commit?](#please-tell-me-for-every-new-commit-is-the-entire-project-indexed-or-just-the-changes-files-in-that-commit)
+
 ####Assuming I use the embedded Elasticsearch
 
 #####a.       What is the added load on my server?
