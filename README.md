@@ -24,6 +24,7 @@ You can checkout a demo of search [here](http://demo.mohamicorp.com/plugins/serv
        * [How much disk space is used by this add-on?](#how-much-disk-space-is-used-by-this-add-on)
        * [Is there an API I can use for queries?](#is-there-an-api-i-can-use-for-queries)
        * [Please tell me, for every new commit, is the entire project indexed, or just the changes files in that commit?](#please-tell-me-for-every-new-commit-is-the-entire-project-indexed-or-just-the-changes-files-in-that-commit)
+       * [Which version of Elasticsearch do I need for an external node?](#which-version-of-elasticsearch-do-i-need-for-an-external-node)
 - [Contact Us](#contact-us)
 
 
@@ -161,6 +162,8 @@ It is important to note that debug log information will not be recorded unless d
 * [How much disk space is used by this add-on?](#how-much-disk-space-is-used-by-this-add-on)
 * [Is there an API I can use for queries?](#is-there-an-api-i-can-use-for-queries)
 * [Please tell me, for every new commit, is the entire project indexed, or just the changes files in that commit?](#please-tell-me-for-every-new-commit-is-the-entire-project-indexed-or-just-the-changes-files-in-that-commit)
+* [Which version of Elasticsearch do I need for an external node?](#which-version-of-elasticsearch-do-i-need-for-an-external-node)
+
 
 ####Assuming I use the embedded Elasticsearch
 
@@ -193,6 +196,9 @@ You plugin currently does not have an API, but the Elasticsearch node does. You 
 
 #### Please tell me, for every new commit, is the entire project indexed, or just the changes files in that commit?
 For every new commit, the plugin will do a diff of the changes and then apply those changes to the index. It doesn't reindex the whole repository because it doesn't have to. 
+
+#### Which version of Elasticsearch do I need for an external node?
+You currently must use Elastichsearch version 1.5.2. We are planning on adding Elasticsearch 2.0 support in the near future.
 
 
 ----------
