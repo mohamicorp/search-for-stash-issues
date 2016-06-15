@@ -1,6 +1,6 @@
-# Search for Bitbucket
+# Smarter Search for Bitbucket
 
-**Search for Bitbucket** is a code, file and commit search service for Atlassian's Bitbucket. It's powered by [Elasticsearch](https://www.elastic.co/products/elasticsearch), which can be configured to be an external or internal Bitbucket service.
+**Smarter Search for Bitbucket** is a code, file and commit search service for Atlassian's Bitbucket. It's powered by [Elasticsearch](https://www.elastic.co/products/elasticsearch), which can be configured to be an external or internal Bitbucket service.
 
 You can checkout a demo of search [here](http://demo.mohamicorp.com/plugins/servlet/codesearch/search).
 
@@ -34,15 +34,15 @@ You can checkout a demo of search [here](http://demo.mohamicorp.com/plugins/serv
 
 
 ### Installation Requirements
-**Search for Bitbucket** requires that your server use git **1.8.5** or higher.
+**Smarter Search for Bitbucket** requires that your server use git **1.8.5** or higher.
 
-**Search for Bitbucket** is powered by Elasticsearch. Either an internal or external node can be used. This node handles all search requests and all repository indexing. 
+**Smarter Search for Bitbucket** is powered by Elasticsearch. Either an internal or external node can be used. This node handles all search requests and all repository indexing. 
 
 If you want to use an external node, you ***must*** use Elasticsearch **1.5.2**.
 ####Internal Node
-By default, Search for Bitbucket spawns an internal elasticsearch node. The initial indexing of large repositories can potentially require a large portion of RAM. **It is recommended to allocate Bitbucket 6GB of RAM for optimal performance**. For instructions on changing the amount of memory available to Bitbucket, take a look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
+By default, Smarter Search for Bitbucket spawns an internal elasticsearch node. The initial indexing of large repositories can potentially require a large portion of RAM. **It is recommended to allocate Bitbucket 6GB of RAM for optimal performance**. For instructions on changing the amount of memory available to Bitbucket, take a look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
 
-As an example benchmark, **Search for Bitbucket** indexed the Linux code base which is approximately 15 million lines of code and half a million commits in 2-3 minutes with **6 GB** of ram on non SSD harddives with an internal node. That said, it is **recommended** that for large codebases you use an external Elasticsearch node. For any concerns or questions, feel free to [contact us](mailto:support@mohamicorp.com).
+As an example benchmark, **Smarter Search for Bitbucket** indexed the Linux code base which is approximately 15 million lines of code and half a million commits in 2-3 minutes with **6 GB** of ram on non SSD harddives with an internal node. That said, it is **recommended** that for large codebases you use an external Elasticsearch node. For any concerns or questions, feel free to [contact us](mailto:support@mohamicorp.com).
 
 ####External Node
 For Bitbucket instances with large codebases and a lot of indexing, it's recommended to setup a separate Elasticsearch service. This will reduce the strain on Bitbucket for indexing, and should significantly improve performance. You can configure an external node in the settings page.
@@ -55,25 +55,25 @@ For Bitbucket instances with large codebases and a lot of indexing, it's recomme
 ####Internal Node
 After installing the plugin in your bitbucket instance, you must enable indexing and trigger a reindex:
 
- 1. Go to `Search for Bitbucket Global Settings` page in the Bitbucket admin panel.
+ 1. Go to `Smarter Search for Bitbucket Global Settings` page in the Bitbucket admin panel.
  2. Enable `Indexing` by clicking the check box.
  3. Click `Save and Reindex` to save the settings and subsequently reindex all repositories.
 
 ####External Node
-You must first setup an external Elasticsearch cluster. For help on that, look [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html). **Search for Bitbucket** has a configuration page in the global settings to use to point to your Elasticsearch instance.
+You must first setup an external Elasticsearch cluster. For help on that, look [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html). **Smarter Search for Bitbucket** has a configuration page in the global settings to use to point to your Elasticsearch instance.
 
 ![enter image description here](https://raw.githubusercontent.com/mohamicorp/search-for-stash-issues/master/images/settings.png)
 
 For testing purposes, we've provided some scripts for installing and running an elasticsearch instance. You can obtain an instance of Elasticsearch by running the provided `bin/install-elasticsearch-instance.sh` script. To run an Elasticsearch instance, run `bin/invoke-es.sh`. Make sure that `elasticearch.yml` is in the directory you are invoking Elasticsearch in so that the Elasticsearch configuration is picked up.
 
-Once the node is setup, you must configure **Search for Bitbucket**: 
+Once the node is setup, you must configure **Smarter Search for Bitbucket**: 
 
- 1. Go to `Search for Bitbucket Global Settings` page in the Bitbucket admin panel.
+ 1. Go to `Smarter Search for Bitbucket Global Settings` page in the Bitbucket admin panel.
  2. Enable `Indexing` by clicking the check box.
  3. Uncheck the `Internal ES Node` checkbox.
  3. Click `Save and Reindex` to save the settings and subsequently reindex all repositories.
  
-**Search for Bitbucket** will then start indexing all of your bitbucket repositories in the background. It will take a few seconds to a few minutes to finish depending on the number and size of your repositories. For large Bitbucket instances, it is recommend indexing to be done during non peak hours.
+**Smarter Search for Bitbucket** will then start indexing all of your bitbucket repositories in the background. It will take a few seconds to a few minutes to finish depending on the number and size of your repositories. For large Bitbucket instances, it is recommend indexing to be done during non peak hours.
 
 By default, only the master and develop branches are indexed. Individual repo admins may modify these settings. See [below](#repository-settings) for instructions.
 
@@ -82,7 +82,7 @@ By default, only the master and develop branches are indexed. Individual repo ad
 
 
 ### Features
-Since **Search for Bitbucket** is powered by Elasticsearch. It utilizes Elasticsearch's powerful [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). This includes support for wildcards, regular expressions, fuzziness, and much more.
+Since **Smarter Search for Bitbucket** is powered by Elasticsearch. It utilizes Elasticsearch's powerful [Query String Syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). This includes support for wildcards, regular expressions, fuzziness, and much more.
 
 There are also many advanced filtering options. Here is a brief summary:
 
@@ -101,7 +101,7 @@ There are also many advanced filtering options. Here is a brief summary:
 
 
 ### Administration
-Search for Bitbucket has advanced configuration settings. These settings should only be adjusted by advanced users.
+Smarter Search for Bitbucket has advanced configuration settings. These settings should only be adjusted by advanced users.
 
 | Setting  | Description |
 | ------------- | ------------- |
@@ -128,7 +128,7 @@ Search for Bitbucket has advanced configuration settings. These settings should 
 
 By default, only master and develop are indexed. Individual repo admins may modify these settings as follows:
 
-- Go to the `Search for Bitbucket Repository Settings` page in your repository settings panel.
+- Go to the `Smarter Search for Bitbucket Repository Settings` page in your repository settings panel.
 - Change the ref regex to match your desired branches.
 - Click `Save` or  `Save and Reindex` to save the settings and subsequently reindex all repositories.
 
