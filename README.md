@@ -60,7 +60,7 @@ After installing the plugin in your bitbucket instance, you must enable indexing
  3. Click `Save and Reindex` to save the settings and subsequently reindex all repositories.
 
 ####External Node
-You must first setup an external Elasticsearch cluster. For help on that, look [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html). **Smarter Search for Bitbucket** has a configuration page in the global settings to use to point to your Elasticsearch instance.
+You must first setup an external Elasticsearch cluster. For help on that, look [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html). Make sure you install the [Delete By Query](https://www.elastic.co/guide/en/elasticsearch/plugins/2.0/plugins-delete-by-query.html) plugin as well. The scripts we've included will do this for you. **Smarter Search for Bitbucket** has a configuration page in the global settings to use to point to your Elasticsearch instance.
 
 ![enter image description here](https://raw.githubusercontent.com/mohamicorp/search-for-stash-issues/master/images/settings.png)
 
