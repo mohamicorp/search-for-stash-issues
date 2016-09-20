@@ -4,3 +4,5 @@ client.transport.cluster.port: 9300-9305
 client.transport.sniff: true
 # Change below to ip address of machine elasticsearch is running on.
 network.host: 127.0.0.1
+script.inline: on
+script.indexed: on
