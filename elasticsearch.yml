@@ -1,6 +1,6 @@
 cluster.name: stash-codesearch
 client.transport.cluster.host: 127.0.0.1
-client.transport.cluster.port: 9300-9305
+client.transport.cluster.port: 9300
 client.transport.sniff: true
 # Change below to ip address of machine elasticsearch is running on.
 network.host: 127.0.0.1
