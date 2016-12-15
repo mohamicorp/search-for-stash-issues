@@ -38,7 +38,7 @@ You can checkout a demo of search [here](http://demo.mohamicorp.com/plugins/serv
 
 **Smarter Search for Bitbucket** is powered by Elasticsearch. Either an internal or external node can be used. This node handles all search requests and all repository indexing. 
 
-If you want to use an external node, you ***must*** use Elasticsearch **1.5.2**.
+If you want to use an external node, you ***must*** use Elasticsearch **2.1.1**.
 ####Internal Node
 By default, Smarter Search for Bitbucket spawns an internal elasticsearch node. The initial indexing of large repositories can potentially require a large portion of RAM. **It is recommended to allocate Bitbucket 6GB of RAM for optimal performance**. For instructions on changing the amount of memory available to Bitbucket, take a look at Altassian's documentation [here](https://confluence.atlassian.com/display/STASH/Scaling+Stash).
 
