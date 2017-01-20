@@ -6,3 +6,4 @@ client.transport.sniff: true
 network.host: 127.0.0.1
 script.inline: on
 script.indexed: on
+index.query.bool.max_clause_count: 10240
