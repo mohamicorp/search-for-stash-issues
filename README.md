@@ -1,8 +1,8 @@
+***NOTICE: We've now moved all issue tracking to JIRA, to open an issue, look [here](https://mohamicorp.atlassian.net/projects/SEARCH/issues).***
+
 # Smarter Search for Bitbucket
 
 **Smarter Search for Bitbucket** is a code, file and commit search service for Atlassian's Bitbucket. It's powered by [Elasticsearch](https://www.elastic.co/products/elasticsearch), which can be configured to be an external or internal Bitbucket service.
-
-You can checkout a demo of search [here](http://demo.mohamicorp.com/plugins/servlet/codesearch/search).
 
 **Table of Contents**
 
