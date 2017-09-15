@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# 1.3.3
-DOWNLOAD_URL="https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.5.2.tar.gz"
+
+# 2.1.1
+DOWNLOAD_URL="https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-2.1.1.tar.gz"
 
 # To find new URLs, see: http://www.elasticsearch.org/download/
 
@@ -29,6 +30,10 @@ if [[ ! -d $INSTALL_DIR ]]; then
     ES_DIR=`ls -d elasticsearch-*`
     mv $ES_DIR $INSTALL_DIR
     cd .. && rm -rf $TMP_DIR
+
+    # Install delete plugin
+    $INSTALL_DIR/bin/plugin install delete-by-query
+    cp elasticsearch.yml $INSTALL_DIR/config/
 fi
 
 exit 0
